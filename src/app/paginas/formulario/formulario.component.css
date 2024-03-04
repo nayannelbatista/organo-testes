@@ -1,17 +1,48 @@
 .formulario {
-  margin: 80px;
+  margin: 80px 0;
+  display: flex;
+  justify-content: center;
 }
 
 .formulario form {
-  max-width: 80%;
+  width: 70%;
   background-color: #F2F2F2;
   border-radius: 20px;
   padding: 36px 64px;
   box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
 }
 
+.formulario__input label {
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #212121;
+}
+
+.formulario form input::placeholder {
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-weight: 400;
+  color: #A4A4A4;
+}
+
+select {
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+input[type="date"] {
+  font-family: var(--font-montserrat);
+  font-size: 16px;
+}
+
 h2 {
   font-family: 'Prata';
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 43px;
 }
 
 .formulario form input,
