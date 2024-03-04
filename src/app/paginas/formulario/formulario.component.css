@@ -1,0 +1,71 @@
+.formulario {
+  margin: 80px;
+}
+
+.formulario form {
+  max-width: 80%;
+  background-color: #F2F2F2;
+  border-radius: 20px;
+  padding: 36px 64px;
+  box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
+}
+
+h2 {
+  font-family: 'Prata';
+}
+
+.formulario form input,
+.formulario form select {
+  margin-bottom: 20px;
+}
+
+div {
+  margin: 24px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+input, select {
+  background-color: #FFF;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  border: none;
+  font-size: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+button {
+  background-color: #6278f7;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 32px;
+  border: none;
+  cursor: pointer;
+  color: #FFF;
+  margin: 32px 0;
+}
+
+button:hover {
+  color: #95FFD4;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml,\ <svg fill="%23000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">\<path d="M7 10l5 5 5-5z"></path>\</svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
+}
+
+
+
+
+

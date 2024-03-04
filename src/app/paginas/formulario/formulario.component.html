@@ -1,0 +1,54 @@
+<section class="formulario">
+  <form [formGroup]="formulario" (ngSubmit)="adicionarLivro()">
+    <h2>Preencha os dados para criar o card do livro</h2>
+    <div>
+        <label for="titulo">Título:</label>
+          <input
+            type="text"
+            placeholder="Digite o título do livro"
+            id="titulo"
+            formControlName="titulo">
+
+          <label for="autoria">Autoria:</label>
+          <input
+            type="text"
+            placeholder="Digite a autoria"
+            id="autoria"
+            formControlName="autoria">
+
+          <label for="imagem">Imagem:</label>
+          <input
+            type="text"
+            placeholder="Informe o endereço da imagem"
+            id="imagem"
+            formControlName="imagem">
+
+          <label for="genero">Gênero:</label>
+          <select id="genero" formControlName="genero">
+            <option value="" disabled>Selecione o gênero</option>
+            <option value="Ficção">Ficção</option>
+            <option value="Não Ficção">Não Ficção</option>
+            <option value="Romance">Romance</option>
+            <option value="Mistério">Mistério</option>
+          </select>
+
+          <label for="dataLeitura">Data de Leitura:</label>
+          <input
+            type="date"
+            id="dataLeitura"
+            formControlName="dataLeitura">
+
+          <label for="classificacao">Classificação:</label>
+          <select id="classificacao" formControlName="classificacao">
+            <option value="">Selecione a classificação</option>
+            <option value="1">&#9733;</option>
+            <option value="2">&#9733;&#9733;</option>
+            <option value="3">&#9733;&#9733;&#9733;</option>
+            <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+            <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+          </select>
+      </div>
+      <button type="submit">Adicionar livro</button>
+  </form>
+</section>
+
