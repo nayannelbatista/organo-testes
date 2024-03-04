@@ -1,0 +1,39 @@
+.card-livro {
+  width: 320px;
+  margin: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color:  #F0F0F0;
+}
+
+.card-livro .cabecalho {
+  background-color:  #F0F0F0;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card-livro img {
+  width: 200px;
+  margin-top: 50px;
+}
+
+.card-livro .rodape {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.card-livro .rodape h3 {
+  color: #6278F7;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.card-livro .rodape h4 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #212121;
+  padding: 0 16px;
+}

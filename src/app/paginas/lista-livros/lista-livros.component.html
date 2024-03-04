@@ -1,1 +1,25 @@
-<p>lista-livros works!</p>
+@if (formulario) {
+  <app-formulario></app-formulario>
+}
+<div class="lista-livros">
+  <h2>Minha organização</h2>
+  <button (click)="mostrarOuEsconderFormulario()">
+    <i class="material-icons">add</i>
+  </button>
+</div>
+<section class="generos">
+  @for (livro of livros; track livro.titulo) {
+    <app-livro
+      [titulo]="livro.titulo"
+      [autoria]="livro.autoria"
+      [imagem]="livro.imagem"
+      [classificacao]="livro.classificacao"
+      [genero]="livro.genero"
+      [dataLeitura]="livro.dataLeitura">
+    </app-livro>
+  }
+</section>
+
+
+
+

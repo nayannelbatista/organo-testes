@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { Livro } from '../../componentes/livro/livro';
+import { LivroService } from '../../services/livro.service';
 
 @Component({
   selector: 'app-formulario',
@@ -10,8 +12,12 @@ import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit{
   formulario!: FormGroup;
+  livros: Livro[] = [];
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(
+    private formBuilder: FormBuilder,
+    private livroService: LivroService
+  ) {}
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
@@ -25,6 +31,8 @@ export class FormularioComponent implements OnInit{
   }
 
   adicionarLivro() {
-
+    const novoLivro = this.formulario.value;
+    this.livroService.adicionarLivro(novoLivro);
+    this.formulario.reset();
   }
 }

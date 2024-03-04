@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { Livro } from './livro';
 
 @Component({
   selector: 'app-livro',
@@ -10,6 +9,9 @@ import { Livro } from './livro';
 })
 export class LivroComponent {
   @Input() titulo: string = '';
-  @Input() imagem: string = '';
   @Input() autoria: string = '';
+  @Input() classificacao: number = 0;
+  @Input() genero: string = '';
+  @Input() dataLeitura: string = ''
+  @Input() imagem: string = '';
 }

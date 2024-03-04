@@ -1,5 +1,11 @@
-<div>
-  <img [src]="imagem" [alt]="titulo">
-  <h4>{{ titulo }}</h4>
-  <h5>{{ autoria }}</h5>
+<div class="card-livro">
+  <div class="cabecalho">
+    <img [src]="imagem" [alt]="titulo">
+  </div>
+  <div class="rodape">
+    <h3>{{ titulo }}</h3>
+    <h4>{{ autoria }}</h4>
+    <h5>Nota {{ classificacao }}</h5>
+    <h6>Lido em {{ dataLeitura }}</h6>
+  </div>
 </div>
