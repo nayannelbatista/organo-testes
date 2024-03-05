@@ -1,12 +1,12 @@
 @if (formulario) {
   <app-formulario></app-formulario>
 }
-<div class="lista-livros">
-  <h2>Minha organização</h2>
+<section class="cabecalho">
+  <h2>Minha organização <span class="linha-colorida"></span></h2>
   <button (click)="mostrarOuEsconderFormulario()">
-    <i class="material-icons">add</i>
+    <img src="assets/imagens/plus.png" alt="">
   </button>
-</div>
+</section>
 <section class="generos">
   @for (livro of livros; track livro.titulo) {
     <app-livro

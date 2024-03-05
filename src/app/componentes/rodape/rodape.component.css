@@ -1,5 +1,7 @@
+.rodape img{
+  max-width: 100%;
+}
+
 .rodape {
-  background-color: #6278F7;
-  width: 100%;
-  height: 213px;
+  display: flex;
 }

@@ -5,10 +5,12 @@
 }
 
 .formulario form {
-  width: 70%;
+  width: 865px;
+  height: 855px;
   background-color: #F2F2F2;
   border-radius: 20px;
-  padding: 36px 64px;
+  padding: 40px;
+  gap: 10px;
   box-shadow: 8px 8px 16px rgba(0,0,0, 0.08);
 }
 
@@ -18,6 +20,13 @@
   font-weight: 600;
   line-height: 22px;
   color: #212121;
+}
+
+.formulario__input input, .formulario__input select {
+  font-family: var(--font-montserrat);
+  font-size: 18px;
+  color: #212121;
+  border-radius: 8px;
 }
 
 .formulario form input::placeholder {
@@ -31,18 +40,17 @@ select {
   font-family: var(--font-montserrat);
   font-size: 16px;
   font-weight: 400;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml,\ <svg fill="%23000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">\<path d="M7 10l5 5 5-5z"></path>\</svg>');
+  background-repeat: no-repeat;
+  background-position: right 8px top 50%;
 }
 
 input[type="date"] {
   font-family: var(--font-montserrat);
   font-size: 16px;
-}
-
-h2 {
-  font-family: 'Prata';
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 43px;
 }
 
 .formulario form input,
@@ -73,41 +81,43 @@ input, select {
 
 .btn-submit {
   background-color: #6278f7;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: 700;
   font-size: 18px;
-  padding: 32px;
+  padding: 24px 32px;
   border: none;
   cursor: pointer;
   color: #FFF;
   margin: 32px 0;
+  width: 280px;
+  height: 74px;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .btn-submit:hover {
   color: #95FFD4;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url('data:image/svg+xml,\ <svg fill="%23000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">\<path d="M7 10l5 5 5-5z"></path>\</svg>');
-  background-repeat: no-repeat;
-  background-position: right 8px top 50%;
-}
-
 .classificacao {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
-.classificacao label {
-  margin-top: 32px;
+.classificacao .estrelas {
+  margin-top: 0;
+}
+
+.estrelas button {
+  padding-right: 4px;
+  padding-left: 0;
 }
 
 .classificacao button {
   color: gray;
-  font-size: 28px;
+  font-size: 24px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -117,6 +127,17 @@ select {
 .classificacao button.filled {
   color: gold;
 }
+
+h3 {
+  font-family: 'Prata';
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 38px;
+  text-align: left;
+  color: #2E2E2E;
+}
+
+
 
 
 

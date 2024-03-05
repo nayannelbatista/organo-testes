@@ -1,6 +1,6 @@
 <section class="formulario">
   <form [formGroup]="formulario" (ngSubmit)="adicionarLivro()">
-    <h2>Preencha os dados para criar o card do livro</h2>
+    <h3>Preencha os dados para criar o card do livro</h3>
     <div class="formulario__input">
         <label for="titulo">Título</label>
           <input
@@ -16,15 +16,9 @@
             id="autoria"
             formControlName="autoria">
 
-          <label for="imagem">Imagem</label>
-          <input
-            type="text"
-            placeholder="Informe o endereço da imagem"
-            id="imagem"
-            formControlName="imagem">
-
           <label for="genero">Gênero</label>
           <select id="genero" formControlName="genero">
+            <option value="" disabled>Selecione o genêro do livro</option>
             <option value="Ficção">Ficção</option>
             <option value="Não Ficção">Não Ficção</option>
             <option value="Romance">Romance</option>
@@ -37,9 +31,16 @@
             id="dataLeitura"
             formControlName="dataLeitura">
 
+          <label for="imagem">Imagem</label>
+          <input
+            type="text"
+            placeholder="Informe o endereço da imagem"
+            id="imagem"
+            formControlName="imagem">
+
             <section class="classificacao">
               <label for="classificacao">Classificação</label>
-              <div>
+              <div class="estrelas">
                 @for (i of estrelas; track i) {
                   <button
                     type="button"
@@ -52,7 +53,7 @@
               </div>
           </section>
       </div>
-      <button class="btn-submit" type="submit">Adicionar livro</button>
+      <button class="btn-submit" type="submit">Criar card</button>
   </form>
 </section>
 

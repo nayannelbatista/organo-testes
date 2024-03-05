@@ -7,30 +7,32 @@ h2 {
   color: #6278F7;
 }
 
-.lista-livros {
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  gap: 20px;
-}
-
-.lista-livros button {
-  border: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #6278F7;
-  cursor: pointer;
-}
-
-.lista-livros i {
-  color: #FFFFFF;
-}
-
 .generos {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cabecalho button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.botao-toggle {
+  display: flex;
+}
+
+.cabecalho .linha-colorida {
+  width: 64px;
+  border-bottom: 4px solid #6278F7;
+  display: block;
+  margin: 0 auto;
+}
