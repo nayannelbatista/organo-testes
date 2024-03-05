@@ -2,11 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { Livro } from '../../componentes/livro/livro';
 import { LivroService } from '../../services/livro.service';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
   standalone: true,
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    RouterLink
+  ],
   templateUrl: './formulario.component.html',
   styleUrl: './formulario.component.css'
 })
@@ -17,7 +21,8 @@ export class FormularioComponent implements OnInit{
 
   constructor(
     private formBuilder: FormBuilder,
-    private livroService: LivroService
+    private livroService: LivroService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -39,5 +44,6 @@ export class FormularioComponent implements OnInit{
     const novoLivro = this.formulario.value;
     this.livroService.adicionarLivro(novoLivro);
     this.formulario.reset();
+    this.router.navigate(['lista-livros']);
   }
 }

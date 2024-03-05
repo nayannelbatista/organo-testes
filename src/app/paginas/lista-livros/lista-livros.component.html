@@ -1,9 +1,6 @@
-@if (formulario) {
-  <app-formulario></app-formulario>
-}
 <section class="cabecalho">
   <h2>Minha organização <span class="linha-colorida"></span></h2>
-  <button (click)="mostrarOuEsconderFormulario()">
+  <button routerLink="/formulario">
     <img src="assets/imagens/plus.png" alt="">
   </button>
 </section>
