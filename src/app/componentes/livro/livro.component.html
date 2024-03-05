@@ -5,7 +5,11 @@
   <div class="rodape">
     <h3>{{ titulo }}</h3>
     <h4>{{ autoria }}</h4>
-    <h5>Nota {{ classificacao }}</h5>
-    <h6>Lido em {{ dataLeitura }}</h6>
+    <h5>
+      @for(i of [1, 2, 3, 4, 5]; track i) {
+        <span class="star" [ngClass]="{'filled': classificacao >= i}">&#9733;</span>
+      }
+    </h5>
+    <h6>Lido em {{ dataLeitura | date: 'dd/MM/yyyy'}}</h6>
   </div>
 </div>

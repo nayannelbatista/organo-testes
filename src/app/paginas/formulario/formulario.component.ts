@@ -13,6 +13,7 @@ import { LivroService } from '../../services/livro.service';
 export class FormularioComponent implements OnInit{
   formulario!: FormGroup;
   livros: Livro[] = [];
+  estrelas = [1, 2, 3, 4, 5];
 
   constructor(
     private formBuilder: FormBuilder,
@@ -26,8 +27,12 @@ export class FormularioComponent implements OnInit{
       imagem: [''],
       genero: [''],
       dataLeitura: [''],
-      classificacao: ['']
+      classificacao: [null]
     })
+  }
+
+  setClassificacao(valor: number) {
+    this.formulario.get('classificacao')?.setValue(valor);
   }
 
   adicionarLivro() {

@@ -71,7 +71,7 @@ input, select {
   outline: none;
 }
 
-button {
+.btn-submit {
   background-color: #6278f7;
   border-radius: 10px;
   font-weight: 700;
@@ -83,7 +83,7 @@ button {
   margin: 32px 0;
 }
 
-button:hover {
+.btn-submit:hover {
   color: #95FFD4;
 }
 
@@ -96,7 +96,27 @@ select {
   background-position: right 8px top 50%;
 }
 
+.classificacao {
+  display: flex;
+  justify-content: space-between;
+}
 
+.classificacao label {
+  margin-top: 32px;
+}
+
+.classificacao button {
+  color: gray;
+  font-size: 28px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.classificacao button.filled {
+  color: gold;
+}
 
 
 

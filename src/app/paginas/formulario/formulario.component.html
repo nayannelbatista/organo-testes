@@ -37,16 +37,22 @@
             id="dataLeitura"
             formControlName="dataLeitura">
 
-          <label for="classificacao">Classificação</label>
-          <select id="classificacao" formControlName="classificacao">
-            <option value="1">&#9733;</option>
-            <option value="2">&#9733;&#9733;</option>
-            <option value="3">&#9733;&#9733;&#9733;</option>
-            <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
-            <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
-          </select>
+            <section class="classificacao">
+              <label for="classificacao">Classificação</label>
+              <div>
+                @for (i of estrelas; track i) {
+                  <button
+                    type="button"
+                    (click)="setClassificacao(i)"
+                    [class]="formulario.get('classificacao')?.value >= i ? 'filled' : ''"
+                  >
+                    &#9733;
+                  </button>
+                }
+              </div>
+          </section>
       </div>
-      <button type="submit">Adicionar livro</button>
+      <button class="btn-submit" type="submit">Adicionar livro</button>
   </form>
 </section>
 
