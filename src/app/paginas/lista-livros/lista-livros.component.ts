@@ -10,22 +10,16 @@ import { FormularioComponent } from '../formulario/formulario.component';
 @Component({
   selector: 'app-lista-livros',
   standalone: true,
-  imports: [
-    LivroComponent,
-    FormularioComponent,
-    CommonModule,
-    RouterLink
-  ],
+  imports: [LivroComponent, FormularioComponent, CommonModule, RouterLink],
   templateUrl: './lista-livros.component.html',
-  styleUrl: './lista-livros.component.css'
+  styleUrl: './lista-livros.component.css',
 })
-export class ListaLivrosComponent implements OnInit{
-
+export class ListaLivrosComponent implements OnInit {
   livros: Livro[] = [];
   livrosPorGenero: { [genero: string]: Livro[] } = {};
   generos: string[] = [];
 
-  constructor(private livroService: LivroService) { }
+  constructor(private livroService: LivroService) {}
 
   ngOnInit() {
     this.livros = this.livroService.obterLivros();
@@ -42,5 +36,22 @@ export class ListaLivrosComponent implements OnInit{
       livrosPorGenero[livro.genero].push(livro);
     }
     return livrosPorGenero;
+  }
+
+  formatarGenero(genero: string): string {
+    switch (genero) {
+      case 'romance':
+        return 'Romance';
+      case 'misterio':
+        return 'Mistério';
+      case 'biografias':
+        return 'Biografias';
+      case 'ficcao-cientifica':
+        return 'Ficção Científica';
+      case 'tecnicos':
+        return 'Técnicos';
+      default:
+        return genero;
+    }
   }
 }

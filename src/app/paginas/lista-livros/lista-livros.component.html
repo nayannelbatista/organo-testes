@@ -5,10 +5,10 @@
   </button>
 </section>
 @for (genero of generos; track genero) {
-  <section [ngClass]="genero.toLowerCase()">
-    <h2>{{ genero }}</h2>
-    @for (livro of livrosPorGenero[genero]; track livro) {
+  <section class="generos" [ngClass]="genero">
+    <h3>{{ formatarGenero(genero) }}<span class="linha-colorida" [ngClass]="genero"></span></h3>
     <div class="livros-genero">
+      @for (livro of livrosPorGenero[genero]; track livro) {
         <app-livro
           [titulo]="livro.titulo"
           [autoria]="livro.autoria"
@@ -17,8 +17,8 @@
           [genero]="livro.genero"
           [dataLeitura]="livro.dataLeitura">
         </app-livro>
+      }
       </div>
-    }
   </section>
 }
 

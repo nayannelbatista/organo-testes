@@ -9,19 +9,27 @@ section {
   border-radius: 8px;
 }
 
-.ficcao {
-  border-top: 24px solid #82CFFA;
-}
-
 .romance {
   border-top: 24px solid #82CFFA;
 }
 
 .misterio {
-  border-top: 24px solid #F7B72D;
+  border-top: 24px solid #A6D157;
 }
 
-section .cabecalho {
+.biografias {
+  border-top: 24px solid #E06B69;
+}
+
+.ficcao-cientifica {
+  border-top: 24px solid #DB6EBF;
+}
+
+.tecnicos {
+  border-top: 24px solid #FF8A29;
+}
+
+section .imagem {
   margin-top: 32px;
   display: flex;
   justify-content: center;
@@ -33,13 +41,17 @@ section img {
   margin-bottom: 20px;
 }
 
-section .rodape {
+section .info-livro {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-section .rodape h3 {
+section .info-livro > * {
+  margin: 8px;
+}
+
+section .info-livro h3 {
   font-family: var(--font-montserrat);
   font-size: 20px;
   font-weight: 700;
@@ -48,8 +60,8 @@ section .rodape h3 {
   max-width: 70%;
 }
 
-section .rodape h4,
-section .rodape h6 {
+section .info-livro h4,
+section .info-livro h6 {
   font-family: var(--font-montserrat);
   font-size: 16px;
   font-weight: 400;
@@ -58,7 +70,7 @@ section .rodape h6 {
   color: #2E2E2E;
 }
 
-section .rodape h5 {
+section .info-livro h5 {
   margin: 0;
 }
 
@@ -71,11 +83,11 @@ section .rodape h5 {
   color: gold;
 }
 
-.card-livro .rodape h3,
-.card-livro .rodape h4,
-.card-livro .rodape h5,
-.card-livro .rodape h6 {
-  margin: 5px 0;
+.card-livro .info-livro h3,
+.card-livro .info-livro h4,
+.card-livro .info-livro h5,
+.card-livro .info-livro h6 {
+  margin: 0;
 }
 
 
