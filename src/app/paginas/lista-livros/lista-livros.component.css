@@ -11,8 +11,28 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.livros-genero {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ficcao {
+  background-color: #F0F8FF;
+}
+
+.romance {
   background-color: #E8FFFF;
 }
+
+.misterio {
+  background-color: #FFE4E1;
+}
+
+
+
 
 .cabecalho {
   display: flex;

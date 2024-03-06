@@ -4,18 +4,26 @@
     <img src="assets/imagens/plus.png" alt="">
   </button>
 </section>
-<section class="generos">
-  @for (livro of livros; track livro.titulo) {
-    <app-livro
-      [titulo]="livro.titulo"
-      [autoria]="livro.autoria"
-      [imagem]="livro.imagem"
-      [classificacao]="livro.classificacao"
-      [genero]="livro.genero"
-      [dataLeitura]="livro.dataLeitura">
-    </app-livro>
-  }
-</section>
+@for (genero of generos; track genero) {
+  <section [ngClass]="genero.toLowerCase()">
+    <h2>{{ genero }}</h2>
+    @for (livro of livrosPorGenero[genero]; track livro) {
+    <div class="livros-genero">
+        <app-livro
+          [titulo]="livro.titulo"
+          [autoria]="livro.autoria"
+          [imagem]="livro.imagem"
+          [classificacao]="livro.classificacao"
+          [genero]="livro.genero"
+          [dataLeitura]="livro.dataLeitura">
+        </app-livro>
+      </div>
+    }
+  </section>
+}
+
+
+
 
 
 

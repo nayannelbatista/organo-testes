@@ -1,4 +1,4 @@
-<div class="card-livro">
+<section [ngClass]="genero">
   <div class="cabecalho">
     <img [src]="imagem" [alt]="titulo">
   </div>
@@ -12,4 +12,4 @@
     </h5>
     <h6>Lido em {{ dataLeitura | date: 'dd/MM/yyyy'}}</h6>
   </div>
-</div>
+</section>
