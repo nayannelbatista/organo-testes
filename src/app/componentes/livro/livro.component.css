@@ -17,7 +17,7 @@ section {
   border-top: 24px solid #A6D157;
 }
 
-.biografias {
+.fantasia {
   border-top: 24px solid #E06B69;
 }
 
@@ -38,6 +38,7 @@ section .imagem {
 
 section img {
   width: 128px;
+  height: 184px;
   margin-bottom: 20px;
 }
 
@@ -45,6 +46,8 @@ section .info-livro {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100%;
+  overflow: hidden;
 }
 
 section .info-livro > * {
@@ -57,7 +60,8 @@ section .info-livro h3 {
   font-weight: 700;
   line-height: 26px;
   text-align: center;
-  max-width: 70%;
+  max-width: 90%;
+  min-height: 52px;
 }
 
 section .info-livro h4,
@@ -83,12 +87,6 @@ section .info-livro h5 {
   color: gold;
 }
 
-.card-livro .info-livro h3,
-.card-livro .info-livro h4,
-.card-livro .info-livro h5,
-.card-livro .info-livro h6 {
-  margin: 0;
-}
 
 
 

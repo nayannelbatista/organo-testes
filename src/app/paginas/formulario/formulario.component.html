@@ -1,3 +1,6 @@
+<section class="cabecalho">
+  <h2>Minhas leituras<span class="linha-colorida"></span></h2>
+</section>
 <section class="formulario">
   <form [formGroup]="formulario" (ngSubmit)="adicionarLivro()">
     <h3>Preencha os dados para criar o card do livro</h3>
@@ -20,7 +23,7 @@
           <select id="genero" formControlName="genero">
             <option value="" disabled>Selecione o genêro do livro</option>
             <option value="ficcao-cientifica">Ficção científica</option>
-            <option value="poesia">Poesia</option>
+            <option value="fantasia">Poesia</option>
             <option value="romance">Romance</option>
             <option value="misterio">Mistério</option>
             <option value="tecnicos">Técnicos</option>

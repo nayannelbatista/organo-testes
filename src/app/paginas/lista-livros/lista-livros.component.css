@@ -11,6 +11,7 @@ h2 {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  justify-content:center;
 }
 
 .generos {
@@ -45,11 +46,11 @@ h2 {
   border-bottom: 4px solid #A6D157;
 }
 
-.biografias {
+.fantasia {
   background-color: #FFE3E3;
 }
 
-.generos .biografias {
+.generos .fantasia {
   border-bottom: 4px solid #E06B69;
 }
 
@@ -80,18 +81,28 @@ h3 {
 
 .cabecalho {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .cabecalho button {
   border: none;
-  background-color: transparent;
   cursor: pointer;
+  padding: 16px 20px;
+  background-color: #6278f7;
+  border-radius: 8px;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 26px;
+  color: #FFF;
+  text-align: left;
+  margin-bottom: 36px;
 }
 
-.botao-toggle {
-  display: flex;
+.cabecalho button i {
+  vertical-align: top;
 }
 
 .cabecalho .linha-colorida {

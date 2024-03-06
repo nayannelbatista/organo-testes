@@ -44,8 +44,8 @@ export class ListaLivrosComponent implements OnInit {
         return 'Romance';
       case 'misterio':
         return 'Mistério';
-      case 'biografias':
-        return 'Biografias';
+      case 'fantasia':
+        return 'Fantasia';
       case 'ficcao-cientifica':
         return 'Ficção Científica';
       case 'tecnicos':

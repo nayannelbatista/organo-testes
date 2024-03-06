@@ -1,3 +1,27 @@
+.cabecalho {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.cabecalho .linha-colorida {
+  width: 64px;
+  border-bottom: 4px solid #6278F7;
+  display: block;
+  margin: 0 auto;
+}
+
+h2 {
+  font-family: 'Prata';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 72px;
+  text-align: center;
+  color: #6278F7;
+}
+
 .formulario {
   margin: 80px 0;
   display: flex;
