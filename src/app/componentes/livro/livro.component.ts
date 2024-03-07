@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Livro } from './livro';
 
 @Component({
   selector: 'app-livro',
@@ -9,10 +10,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './livro.component.css'
 })
 export class LivroComponent {
-  @Input() titulo: string = '';
-  @Input() autoria: string = '';
-  @Input() classificacao: number = 0;
-  @Input() genero: string = '';
-  @Input() dataLeitura: string = ''
-  @Input() imagem: string = '';
+  @Input() livro!: Livro;
 }

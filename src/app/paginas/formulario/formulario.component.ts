@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { Livro } from '../../componentes/livro/livro';
+import { GeneroLiterario, Livro } from '../../componentes/livro/livro';
 import { LivroService } from '../../services/livro.service';
 import { Router, RouterLink } from '@angular/router';
 
@@ -18,6 +18,7 @@ export class FormularioComponent implements OnInit{
   formulario!: FormGroup;
   livros: Livro[] = [];
   estrelas = [1, 2, 3, 4, 5];
+  generos: GeneroLiterario[] = []
 
   constructor(
     private formBuilder: FormBuilder,
@@ -34,6 +35,7 @@ export class FormularioComponent implements OnInit{
       dataLeitura: [''],
       classificacao: [null]
     })
+    this.generos = this.livroService.generos
   }
 
   setClassificacao(valor: number) {
@@ -41,7 +43,11 @@ export class FormularioComponent implements OnInit{
   }
 
   adicionarLivro() {
-    const novoLivro = this.formulario.value;
+    const novoLivro = {
+      ...this.formulario.value,
+      genero: this.generos.find(g => g.id === this.formulario.value.genero),
+    };
+
     this.livroService.adicionarLivro(novoLivro);
     this.formulario.reset();
     this.router.navigate(['lista-livros']);
