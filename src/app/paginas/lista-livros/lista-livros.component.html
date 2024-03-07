@@ -7,17 +7,12 @@
 </section>
 @for (genero of generos; track genero) {
   <section class="generos" [ngClass]="genero">
-    <h3>{{ formatarGenero(genero) }}<span class="linha-colorida" [ngClass]="genero"></span></h3>
+    <h3>{{ genero.value }}<span class="linha-colorida" [ngClass]="genero.id"></span></h3>
     <div class="livros-genero">
-      @for (livro of livrosPorGenero[genero]; track livro) {
+      @for (livro of livroService.obterLivrosPorGenero(genero.id); track livro) {
         <app-livro
-          [titulo]="livro.titulo"
-          [autoria]="livro.autoria"
-          [imagem]="livro.imagem"
-          [classificacao]="livro.classificacao"
-          [genero]="livro.genero"
-          [dataLeitura]="livro.dataLeitura">
-        </app-livro>
+          [livro]="livro"
+        />
       }
       </div>
   </section>

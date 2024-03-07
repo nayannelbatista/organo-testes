@@ -22,11 +22,10 @@
           <label for="genero">Gênero</label>
           <select id="genero" formControlName="genero">
             <option value="" disabled>Selecione o genêro do livro</option>
-            <option value="ficcao-cientifica">Ficção científica</option>
-            <option value="fantasia">Fantasia</option>
-            <option value="romance">Romance</option>
-            <option value="misterio">Mistério</option>
-            <option value="tecnicos">Técnicos</option>
+            @for (genero of generos; track genero) {
+
+              <option [value]="genero.id">{{ genero.value }}</option>
+            }
           </select>
 
           <label for="dataLeitura">Data da leitura</label>
@@ -44,6 +43,10 @@
 
             <section class="classificacao">
               <label for="classificacao">Classificação</label>
+              <!-- esse carinha aqui podia ser um componene separado, de Rating, usando ControlValueAccessor e ter um modo somente leitura -->
+              <!-- aí toda essa lógica pode vir de lá -->
+              <!-- poderia ter uns @Inputs dizendo o valor máximo e aí a declaração do array fica do lado do .ts -->
+              <!-- Assim o mesmo componente que vc seleciona o valor, vc exibe o resultado -->
               <div class="estrelas">
                 @for (i of estrelas; track i) {
                   <button
